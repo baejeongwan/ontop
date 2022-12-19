@@ -3,7 +3,7 @@ run-name: Publishing package to Github...
 on: [push]
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -11,12 +11,13 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
-      - run: dir
-      - run: npm run buildWin
-      - uses: actions/upload-artifact@v3
-        with:
-          name: OnTop Windows Installer
-          path: dist/OnTop*.exe
+      - run: ls
+      - run: npm run buildMac
+      - run: ls dist
+      #- uses: actions/upload-artifact@v3
+      #  with:
+      #    name: OnTop macOS Installer
+      #    path: dist/OnTop*.exe
       - uses: actions/upload-artifact@v3
         with:
           name: EULA

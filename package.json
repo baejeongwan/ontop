@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "buildWin": "electron-builder -w ",
-    "buildMac": "electron-builder -m",
-    "buildLin": "electron-builder -l"
+    "buildWin": "electron-builder -w -p never",
+    "buildMac": "electron-builder -m -p never",
+    "buildLin": "electron-builder -l -p never"
   },
   "author": "Jayden Bae",
   "license": "ISC",
