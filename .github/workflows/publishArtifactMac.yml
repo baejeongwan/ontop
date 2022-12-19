@@ -1,4 +1,4 @@
-name: Publish package for Windows
+name: Publish package for macOS
 run-name: Publishing package to Github...
 on: [push]
 jobs:
@@ -14,10 +14,14 @@ jobs:
       - run: ls
       - run: npm run buildMac
       - run: ls dist
-      #- uses: actions/upload-artifact@v3
-      #  with:
-      #    name: OnTop macOS Installer
-      #    path: dist/OnTop*.exe
+      - uses: actions/upload-artifact@v3
+        with:
+          name: OnTop macOS Installer
+          path: dist/OnTop*.dmg
+      - uses: actions/upload-artifact@v3
+        with:
+          name: OnTop macOS ZIP
+          path: dist/OnTop*.zip
       - uses: actions/upload-artifact@v3
         with:
           name: EULA

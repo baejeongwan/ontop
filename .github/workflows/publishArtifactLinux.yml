@@ -1,4 +1,4 @@
-name: Publish package for Windows
+name: Publish package for Linux
 run-name: Publishing package to Github...
 on: [push]
 jobs:
