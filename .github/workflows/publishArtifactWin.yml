@@ -1,9 +1,9 @@
-name: Publish package
+name: Publish package for Windows
 run-name: Publishing package to Github...
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -11,5 +11,5 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
-      - run: ls -al
+      - run: dir
       - run: npm run buildWin
