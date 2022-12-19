@@ -1,0 +1,31 @@
+{
+  "name": "ontop",
+  "version": "1.0.0",
+  "description": "OnTop Browser",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "buildWin": "electron-builder -w "
+  },
+  "author": "Jayden Bae",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.2"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "productName": "OnTop Browser",
+    "copyright": "Free to use",
+    "appId": "com.jaydenbae.ontop",
+    "nsis": {
+      "oneClick": false,
+      "installerSidebar": "build/installerSidebar.bmp",
+      "license": "build/license.html"
+    }
+  }
+}
